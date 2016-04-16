@@ -361,9 +361,64 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 198494, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 196814, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 180978, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 157392, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 157292, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 148392, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 146494, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 132844, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 127322, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 112548, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+      propertyPath: m_TagString
+      value: Lines
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1913910867 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 136618, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+  m_PrefabInternal: {fileID: 1880789518}
+--- !u!114 &1913910868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1913910867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946160dec82f7fb498d41f289643f7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2011062894
 Prefab:
   m_ObjectHideFlags: 0

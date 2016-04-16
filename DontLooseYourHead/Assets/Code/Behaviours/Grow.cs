@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Grow : MonoBehaviour
 {
-    [SerializeField]
     private Vector3 destinationScale;
 
 

@@ -66,13 +66,13 @@ public class Spawner : MonoBehaviour
         wall.transform.localPosition = new Vector3(0, 1, deltaDistanceToSpawner);
         wall.name = "wall #" + wallNr;
 
+        //generate blocks
         var blocks = new GameObject("blocks");
         blocks.transform.parent = wall.transform;
         blocks.transform.localScale = Vector3.one;
         blocks.transform.localRotation = Quaternion.identity;
         blocks.transform.localPosition = new Vector3((nextShape.Width - scale.x) / 2f + (scale.x / 2f) / nextShape.Width, (nextShape.Height - scale.y) / 2f + (scale.y / 2f) / nextShape.Height);
 
-        //generate blocks
         for (int w = 0; w < nextShape.Width; w++)
         {
             for (int h = 0; h < nextShape.Height; h++)
@@ -129,11 +129,8 @@ public class Spawner : MonoBehaviour
     {
         get
         {
-            var wallsBeforeMe = walls.Count(x=>x.transform.localPosition.z > gameObject.transform.localPosition.z);
-            var lastWall = walls.LastOrDefault();
-            return
-                wallsBeforeMe < wallsAtTheSameTime;
-                //|| Mathf.Abs(lastWall.transform.localPosition.z-gameObject.transform.localPosition.z) < spaceBetweenWalls;
+            var wallsBeforeMe = walls.Count(/*x=>x.transform.localPosition.z > gameObject.transform.localPosition.z*/);
+            return wallsBeforeMe < wallsAtTheSameTime;
         }
     }
 

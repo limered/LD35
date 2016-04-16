@@ -14,7 +14,6 @@ public class ShapeCreator
     public Shape GenerateNextShape()
     {
         var texture = game.ValidShapes[rng.Next(0, game.ValidShapes.Length)];
-        Debug.Log("next shape: " + texture.name);
 
         var blocks = new bool[texture.width, texture.height];
         for (int w=0; w<texture.width; w++)

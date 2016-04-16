@@ -132,8 +132,8 @@ public class Spawner : MonoBehaviour
             var wallsBeforeMe = walls.Count(x=>x.transform.localPosition.z > gameObject.transform.localPosition.z);
             var lastWall = walls.LastOrDefault();
             return
-                wallsBeforeMe < wallsAtTheSameTime
-                || Mathf.Abs(lastWall.transform.localPosition.z-gameObject.transform.localPosition.z) < spaceBetweenWalls;
+                wallsBeforeMe < wallsAtTheSameTime;
+                //|| Mathf.Abs(lastWall.transform.localPosition.z-gameObject.transform.localPosition.z) < spaceBetweenWalls;
         }
     }
 

@@ -2,7 +2,7 @@
 
 public class Wall : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed = 100f;
 
     private Rigidbody body;
 
@@ -15,7 +15,8 @@ public class Wall : MonoBehaviour
 
     void FixedUpdate()
     {
-        body.velocity = Vector3.back * speed;
-        body.position += body.velocity*Time.fixedDeltaTime;
+        body.AddForce(Vector3.back * speed * body.mass);
+        //body.velocity = Vector3.back * speed;
+        //body.position += body.velocity*Time.fixedDeltaTime;
     }
 }

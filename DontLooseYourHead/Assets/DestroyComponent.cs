@@ -24,15 +24,16 @@ public class DestroyComponent : MonoBehaviour
         {
             transform.parent = (destroyedParent != null) ? destroyedParent.transform : null;
 
-            var rigid = GetComponent<Rigidbody>();
-            rigid.useGravity = true;
-            rigid.mass = 20;
+            RemoveAllCharJoints();
 
-
-            var charJoint = GetComponent("CharacterJoint");
-            if (charJoint != null)
-                (charJoint as CharacterJoint).breakForce = breakForce;
             DeleteAllConnectedHandles();
+
+            var rigid = GetComponent<Rigidbody>();
+            if (rigid)
+            {
+                rigid.useGravity = true;
+                rigid.mass = 20;
+            }
         }
     }
 
@@ -41,6 +42,29 @@ public class DestroyComponent : MonoBehaviour
         if (handle != null)
         {
             Destroy(handle);
+        }
+    }
+
+    private void RemoveAllCharJoints()
+    {
+        if (transform.childCount > 0) {
+            for (var i = transform.childCount-1; i >= 0; i--) {
+                var child = transform.GetChild(i);
+                child.transform.parent = (destroyedParent != null) ? destroyedParent.transform : null;
+
+                var body = child.gameObject.AddComponent<Rigidbody>();
+                body.useGravity = false;
+
+                var charJoint = child.GetComponent("CharacterJoint");
+                if (charJoint != null)
+                    (charJoint as CharacterJoint).breakForce = breakForce;
+            }
+        }
+        else
+        {
+            var charJoint = GetComponent("CharacterJoint");
+            if (charJoint != null)
+                (charJoint as CharacterJoint).breakForce = breakForce;
         }
     }
 

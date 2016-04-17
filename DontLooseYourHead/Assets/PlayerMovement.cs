@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 
     private LineRenderer lineComponent;
 
+    public float blood = 5000;
+
     private void Start()
     {
         lineComponent = GetComponent<LineRenderer>();
@@ -27,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
         {
             StopGrabbing();
         }
+
+
     }
 
     private void StartGrabbing()
@@ -113,4 +117,17 @@ public class PlayerMovement : MonoBehaviour
         var diff = handle.transform.position - rayPoint;
         return new Vector2(diff.x, diff.y).SqrMagnitude();
     }
+
+    public void Die()
+    {
+        DestroyHandles();
+        DestoyCharJoints();
+        AddRigidBodies();
+    }
+
+    private void DestroyHandles() { }
+
+    private void DestoyCharJoints() { }
+
+    private void AddRigidBodies() { }
 }

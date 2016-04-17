@@ -5,11 +5,6 @@ public class Wall : MonoBehaviour
     public float speed = 100f;
 
     private Rigidbody body;
-    private bool isMoving = false;
-    [SerializeField]
-    private bool isInSlowmotion = false;
-
-    private bool wasInSlowmotion = false;
 
     [SerializeField]
     private float slowMotionFactor = 20f;
@@ -23,67 +18,71 @@ public class Wall : MonoBehaviour
     [SerializeField]
     private float endSlowmotionAt = 5f;
 
-    private int playerLayer;
+    [SerializeField] private WallState wallState = WallState.None;
 
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody>();
         player = IoC.Resolve<Player>();
-
-        playerLayer = LayerMask.NameToLayer("Player");
     }
 
 
     public void StartMoving()
     {
-        isMoving = true;
+        wallState = WallState.BeforeSlowmotion;
     }
 
     void Update()
     {
-        if (isMoving)
+        if (wallState != WallState.None)
         {
             var distanceToPlayer = gameObject.transform.position.z - player.transform.position.z;
             if (distanceToPlayer > 0 && distanceToPlayer <= startSlowmotionAt && distanceToPlayer >= endSlowmotionAt)
             {
-                if (!isInSlowmotion)
+                if (wallState == WallState.BeforeSlowmotion)
                 {
                     timeLeft = 0f;
-                    wasInSlowmotion = true;
+                    wallState = WallState.InSlowmotion;
                 }
 
                 timeLeft = Mathf.Clamp(timeLeft + Time.deltaTime, 0f, lerpInTime);
 
-                isInSlowmotion = true;
                 //body.AddForce(Vector3.back * speed * body.mass / slowMotionFactor * Time.deltaTime);
                 body.velocity = Vector3.back * speed / Mathf.Clamp(slowMotionFactor * timeLeft / lerpInTime, 1f, slowMotionFactor);
                 body.position += body.velocity * Time.deltaTime;
             }
             else
             {
-                if (isInSlowmotion)
+                if (wallState == WallState.InSlowmotion)
                 {
+                    wallState = WallState.AfterSlowmotion;
                     timeLeft = lerpInTime;
                     body.isKinematic = false;
                 }
 
                 timeLeft = Mathf.Clamp(timeLeft - Time.deltaTime, 0f, lerpInTime);
 
-                isInSlowmotion = false;
+                
 
-                if (wasInSlowmotion)
+                if (wallState == WallState.AfterSlowmotion)
                 {
 
-                    body.AddForce(Vector3.back*speed*body.mass*50f
-                        /// Mathf.Clamp(slowMotionFactor*timeLeft/lerpInTime, 1f, slowMotionFactor)/(wasInSlowmotion ? 4f : 1f)
-                        );
+                    body.AddForce(Vector3.back*speed*body.mass*50f);
                 }
                 else
                 {
-                    body.velocity = Vector3.back * speed / Mathf.Clamp(slowMotionFactor * timeLeft / lerpInTime, 1f, slowMotionFactor) / (wasInSlowmotion ? 4f : 1f);
+                    body.velocity = Vector3.back * speed / Mathf.Clamp(slowMotionFactor * timeLeft / lerpInTime, 1f, slowMotionFactor);
                     body.position += body.velocity * Time.deltaTime;
                 }
             }
         }
+    }
+
+    public enum WallState
+    {
+        None,
+        BeforeSlowmotion,
+        InSlowmotion,
+        AfterSlowmotion
     }
 }

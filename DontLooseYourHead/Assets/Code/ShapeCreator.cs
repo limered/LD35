@@ -6,6 +6,7 @@ public class ShapeCreator
     private readonly Dictionary<string, Shape> cache = new Dictionary<string, Shape>();
     private readonly Game game;
     private readonly System.Random rng = new System.Random();
+    private Shape? lastShape;
 
     public ShapeCreator()
     {
@@ -15,9 +16,15 @@ public class ShapeCreator
 
     public Shape GenerateNextShape()
     {
-        var texture = game.ValidShapes[rng.Next(0, game.ValidShapes.Length)];
+        Texture2D texture;
+        string name;
+        do
+        {
+            texture = game.ValidShapes[rng.Next(0, game.ValidShapes.Length)];
+            name = texture.name;
+        } while (lastShape.HasValue && lastShape.Value.Name == name);
+
         var pixels = texture.GetPixels();
-        var name = texture.name;
         var width = texture.width;
         var height = texture.height;
 
@@ -29,13 +36,15 @@ public class ShapeCreator
             {
                 for (int h = 0; h < height; h++)
                 {
-                    blocks[w, h] = pixels[h*width + w] != Color.black;
+                    blocks[w, h] = pixels[h * width + w] != Color.black;
                 }
             }
 
-            shape = new Shape(blocks, width, height);
+            shape = new Shape(name, blocks, width, height);
             cache.Add(name, shape);
         }
+
+        lastShape = shape;
         return shape;
     }
 }

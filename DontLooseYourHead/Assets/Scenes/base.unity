@@ -369,24 +369,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1 &1291766463 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 160990, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-  m_PrefabInternal: {fileID: 1880789518}
---- !u!114 &1291766467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1291766463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d03938547306ea44e92943ae5403aaba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodEmitterToActivate: {fileID: 0}
-  handlesToDelete: []
-  legs: []
 --- !u!1001 &1880789518
 Prefab:
   m_ObjectHideFlags: 0
@@ -426,72 +408,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 11456330, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11455910, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: bloodEmitterToActivate
-      value: 
-      objectReference: {fileID: 1959907805}
-    - target: {fileID: 11409164, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: bloodEmitterToActivate
-      value: 
-      objectReference: {fileID: 1959907805}
-    - target: {fileID: 11466948, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: bloodEmitterToActivate
-      value: 
-      objectReference: {fileID: 1959907805}
-    - target: {fileID: 5466898, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Drag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5446712, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Drag
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460238, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5494744, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5481044, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5482392, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5434020, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5413096, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5433808, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5428158, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5405814, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5430586, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11456330, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1909825738
@@ -521,10 +438,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &1959907805 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 152814, guid: d5b00e8d755c4514e9d28865e354d913, type: 2}
-  m_PrefabInternal: {fileID: 1880789518}
 --- !u!1001 &2011062894
 Prefab:
   m_ObjectHideFlags: 0

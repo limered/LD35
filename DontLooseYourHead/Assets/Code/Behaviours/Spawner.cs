@@ -90,10 +90,12 @@ public class Spawner : MonoBehaviour
             }
         }
 
-
+        int renderQIndex = 0;
         foreach (var ren in wall.GetComponentsInChildren<MeshRenderer>())
         {
             ren.material = wallMat;
+            ren.material.mainTextureOffset = new Vector2((float)rng.NextDouble(), (float)rng.NextDouble());
+            ren.material.renderQueue = renderQIndex++;
         }
 
         currentWall = wall.GetComponent<Wall>();

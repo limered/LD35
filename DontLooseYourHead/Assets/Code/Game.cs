@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
+    private Leaderboard leaderboard;
+
     [SerializeField]
     private Texture2D[] _validShapes;
     public Texture2D[] ValidShapes { get { return _validShapes; } }
@@ -14,6 +16,8 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        leaderboard = IoC.Resolve<Leaderboard>();
+
         StartGame();
     }
 

@@ -20,8 +20,8 @@ public class PelvisCollision : MonoBehaviour
         if (col.gameObject.tag != "Wall") return;
 
         RemoveHandles();
-        AddBody();
         RemoveJoints();
+        AddBody();
         MoveToDestroyed();
     }
 
@@ -46,7 +46,7 @@ public class PelvisCollision : MonoBehaviour
             }
         }
 
-        var myJoint = GetComponent<CharacterJoint>();
+        var myJoint = transform.parent.GetComponent<CharacterJoint>();
         if (myJoint != null)
             myJoint.breakForce = 1;
     }

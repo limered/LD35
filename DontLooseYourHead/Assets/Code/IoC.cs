@@ -8,7 +8,7 @@ public static class IoC
     {
         //register dependencies here
         RegisterSingleton(()=>new ShapeCreator());
-        RegisterSingleton(()=>new Leaderboard());
+        //RegisterSingleton(()=>new Leaderboard());
     }
 
     private static Dictionary<Type, object> singletons = new Dictionary<Type, object>();

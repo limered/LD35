@@ -39,7 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fda607b7023b03499db9f0e61ffdb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _validShapes:
+  startShape: {fileID: 2800000, guid: 73fbf5a40e58b234fb85a7e2a6319a25, type: 3}
+  validShapes:
   - {fileID: 2800000, guid: 0726649e9ed1ba14395a89c3dd633303, type: 3}
   - {fileID: 2800000, guid: ee93bf8f672e5dc47a9ef48ae352d957, type: 3}
   - {fileID: 2800000, guid: 97d9fb4030255204aab067c569c1c583, type: 3}

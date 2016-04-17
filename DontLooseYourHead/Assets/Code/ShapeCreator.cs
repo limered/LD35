@@ -14,20 +14,28 @@ public class ShapeCreator
     }
 
 
-    public Shape GenerateNextShape()
+    public Shape GenerateShape(Texture2D texture=null)
     {
-        Texture2D texture;
+        //get random texture from valid shapes pool
         string name;
-        do
+        if (texture == null)
         {
-            texture = game.ValidShapes[rng.Next(0, game.ValidShapes.Length)];
+            do
+            {
+                texture = game.ValidShapes[rng.Next(0, game.ValidShapes.Length)];
+                name = texture.name;
+            } while (lastShape.HasValue && lastShape.Value.Name == name);
+        }
+        else
+        {
             name = texture.name;
-        } while (lastShape.HasValue && lastShape.Value.Name == name);
+        }
 
         var pixels = texture.GetPixels();
         var width = texture.width;
         var height = texture.height;
 
+        //read shape data
         Shape shape;
         if (!cache.TryGetValue(name, out shape))
         {

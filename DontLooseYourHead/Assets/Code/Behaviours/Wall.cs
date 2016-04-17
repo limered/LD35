@@ -23,10 +23,14 @@ public class Wall : MonoBehaviour
     [SerializeField]
     private float endSlowmotionAt = 5f;
 
+    private int playerLayer;
+
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody>();
         player = IoC.Resolve<Player>();
+
+        playerLayer = LayerMask.NameToLayer("Player");
     }
 
 
@@ -60,14 +64,25 @@ public class Wall : MonoBehaviour
                 if (isInSlowmotion)
                 {
                     timeLeft = lerpInTime;
+                    body.isKinematic = false;
                 }
 
                 timeLeft = Mathf.Clamp(timeLeft - Time.deltaTime, 0f, lerpInTime);
 
                 isInSlowmotion = false;
-                //body.AddForce(Vector3.back * speed * body.mass * Time.deltaTime);
-                body.velocity = Vector3.back * speed / Mathf.Clamp(slowMotionFactor * timeLeft / lerpInTime, 1f, slowMotionFactor) / (wasInSlowmotion ? 4f : 1f);
-                body.position += body.velocity * Time.deltaTime;
+
+                if (wasInSlowmotion)
+                {
+
+                    body.AddForce(Vector3.back*speed*body.mass*50f
+                        /// Mathf.Clamp(slowMotionFactor*timeLeft/lerpInTime, 1f, slowMotionFactor)/(wasInSlowmotion ? 4f : 1f)
+                        );
+                }
+                else
+                {
+                    body.velocity = Vector3.back * speed / Mathf.Clamp(slowMotionFactor * timeLeft / lerpInTime, 1f, slowMotionFactor) / (wasInSlowmotion ? 4f : 1f);
+                    body.position += body.velocity * Time.deltaTime;
+                }
             }
         }
     }

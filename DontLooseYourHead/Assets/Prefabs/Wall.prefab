@@ -68,7 +68,7 @@ GameObject:
   - 64: {fileID: 6457306}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,9 +324,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 118
   m_CollisionDetection: 2
 --- !u!64 &6457306
 MeshCollider:
@@ -404,7 +404,7 @@ MonoBehaviour:
   slowMotionFactor: 35
   lerpInTime: 0.25
   startSlowmotionAt: 25
-  endSlowmotionAt: 10
+  endSlowmotionAt: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

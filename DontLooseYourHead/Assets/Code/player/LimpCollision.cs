@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class LimpCollision : MonoBehaviour
+public class LimpCollision : BaseCollider
 {
     public bool isLast;
     public bool isMiddle;
@@ -29,28 +29,65 @@ public class LimpCollision : MonoBehaviour
             if (middleHandle)
                 middleHandle.SetActive(false);
             firstHandle.SetActive(true);
+
+            RemoveJoints();
+            MoveToDestroyed();
         }
         else if (isFirst)
         {
             lastHandle.SetActive(false);
-            if(middleHandle)
+            if (middleHandle)
                 middleHandle.SetActive(false);
             firstHandle.SetActive(false);
+
+            RemoveJointsSibling();
+            MoveToDestroyedSibling();
         }
 
-        RemoveJoints();
-        MoveToDestroyed();
+        ActivateBloodEmitter();
     }
 
     private void RemoveJoints()
     {
         var joint = GetComponent<CharacterJoint>();
-        if(joint)
+        if (joint)
             joint.breakForce = 1f;
+    }
+
+    private void RemoveJointsSibling()
+    {
+        var siblings = transform.parent.GetComponentsInChildren<Transform>();
+        foreach (var sibling in siblings)
+        {
+            var joint = sibling.gameObject.GetComponent<CharacterJoint>();
+            if (joint)
+                joint.breakForce = 1f;
+        }
     }
 
     private void MoveToDestroyed()
     {
-        transform.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
+        if (tag != "Blood")
+        {
+            transform.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
+            var rigid = GetComponent<Rigidbody>();
+            if (rigid)
+                rigid.useGravity = true;
+        }
+    }
+
+    private void MoveToDestroyedSibling()
+    {
+        var siblings = transform.parent.GetComponentsInChildren<Transform>();
+        foreach (var sibling in siblings)
+        {
+            if (sibling.gameObject.tag != "Blood")
+            {
+                sibling.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
+                var rigid = sibling.gameObject.GetComponent<Rigidbody>();
+                if (rigid)
+                    rigid.useGravity = true;
+            }
+        }
     }
 }

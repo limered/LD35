@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DestroyComponent : MonoBehaviour
+public class DestroyComponent : BaseCollider
 {
     public float breakForce = 1f;
     public GameObject handle;
@@ -20,8 +20,9 @@ public class DestroyComponent : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Wall")
+        if (col.gameObject.tag == "Wall" && col.gameObject.tag != "Blood")
         {
+            
             transform.parent = (destroyedParent != null) ? destroyedParent.transform : null;
 
             RemoveAllCharJoints();
@@ -34,6 +35,8 @@ public class DestroyComponent : MonoBehaviour
                 rigid.useGravity = true;
                 rigid.mass = 20;
             }
+
+            ActivateBloodEmitter();
         }
     }
 
@@ -52,8 +55,11 @@ public class DestroyComponent : MonoBehaviour
                 var child = transform.GetChild(i);
                 child.transform.parent = (destroyedParent != null) ? destroyedParent.transform : null;
 
-                var body = child.gameObject.AddComponent<Rigidbody>();
-                body.useGravity = false;
+                if (child.tag != "Blood")
+                {
+                    var body = child.gameObject.AddComponent<Rigidbody>();
+                    body.useGravity = false;
+                }
 
                 var charJoint = child.GetComponent("CharacterJoint");
                 if (charJoint != null)

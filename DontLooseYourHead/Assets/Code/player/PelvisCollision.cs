@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PelvisCollision : MonoBehaviour
+public class PelvisCollision : BaseCollider
 {
     private GameObject player;
     private GameObject destroyedPlayer;
@@ -23,6 +23,8 @@ public class PelvisCollision : MonoBehaviour
         RemoveJoints();
         AddBody();
         MoveToDestroyed();
+
+        ActivateBloodEmitter();
     }
 
     private void RemoveHandles()
@@ -35,6 +37,10 @@ public class PelvisCollision : MonoBehaviour
 
     private void RemoveJoints()
     {
+        var myJoint = transform.parent.GetComponent<CharacterJoint>();
+        if (myJoint != null)
+            myJoint.breakForce = 1;
+
         foreach (var leg in legs)
         {
             var legChildren = leg.GetComponentsInChildren<Transform>();
@@ -45,10 +51,6 @@ public class PelvisCollision : MonoBehaviour
                     joint.breakForce = 1;
             }
         }
-
-        var myJoint = transform.parent.GetComponent<CharacterJoint>();
-        if (myJoint != null)
-            myJoint.breakForce = 1;
     }
 
     private void MoveToDestroyed()
@@ -58,14 +60,16 @@ public class PelvisCollision : MonoBehaviour
             var legChildren = leg.GetComponentsInChildren<Transform>();
             foreach (var child in legChildren)
             {
-                child.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
+                if (child.tag != "Blood")
+                    child.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
             }
         }
 
         var myChildren = GetComponentsInChildren<Transform>();
         foreach (var child in myChildren)
         {
-            child.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
+            if (child.tag != "Blood")
+                child.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
         }
     }
 
@@ -76,14 +80,16 @@ public class PelvisCollision : MonoBehaviour
             var legChildren = leg.GetComponentsInChildren<Transform>();
             foreach (var child in legChildren)
             {
-                child.gameObject.AddComponent<Rigidbody>();
+                if (child.tag != "Blood")
+                    child.gameObject.AddComponent<Rigidbody>();
             }
         }
 
         var myChildren = GetComponentsInChildren<Transform>();
         foreach (var child in myChildren)
         {
-            child.gameObject.AddComponent<Rigidbody>();
+            if (child.tag != "Blood")
+                child.gameObject.AddComponent<Rigidbody>();
         }
     }
 }

@@ -43,7 +43,7 @@ public class Leaderboard
         if (hs > Highscore)
         {
             Highscore = hs;
-            SaveScore(hs);
+            SaveScore(Highscore);
         }
     }
 

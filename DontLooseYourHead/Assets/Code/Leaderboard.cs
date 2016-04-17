@@ -12,7 +12,7 @@ public class Leaderboard
     public Leaderboard()
     {
         Init();
-        
+
         gameService.GetGameByName(GameConstants.GameName, new LeaderboardCallback<com.shephertz.app42.paas.sdk.csharp.game.Game, App42NotFoundException>(game =>
         {
             Debug.Log("game exists");
@@ -26,7 +26,7 @@ public class Leaderboard
                     }));
             }
         ));
-        
+
     }
 
     private void Init()
@@ -44,14 +44,14 @@ public class Leaderboard
         scoreBoardService = App42API.BuildScoreBoardService();
     }
 
-    public class LeaderboardCallback<TResponse,TException> : App42CallBack 
+    public class LeaderboardCallback<TResponse, TException> : App42CallBack
         where TResponse : App42Response
         where TException : Exception
     {
         private readonly Action<TResponse> onSuccess;
         private readonly Action<TException> onError;
 
-        public LeaderboardCallback(Action<TResponse> onSuccess =null, Action<TException> onError=null)
+        public LeaderboardCallback(Action<TResponse> onSuccess = null, Action<TException> onError = null)
         {
             this.onSuccess = onSuccess;
             this.onError = onError;

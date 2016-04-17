@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     private LineRenderer lineComponent;
 
-    public float blood = 5000;
-
     private void Start()
     {
         lineComponent = GetComponent<LineRenderer>();
@@ -29,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
         {
             StopGrabbing();
         }
-
-
     }
 
     private void StartGrabbing()

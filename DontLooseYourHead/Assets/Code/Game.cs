@@ -19,7 +19,7 @@ public class Game : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("start");
+        Debug.Log("game start");
 
         var shape = IoC.Resolve<ShapeCreator>().GenerateNextShape();
         

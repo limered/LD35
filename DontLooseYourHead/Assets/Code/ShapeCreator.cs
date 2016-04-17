@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class ShapeCreator
 {
+    private readonly Dictionary<string, Shape> cache = new Dictionary<string, Shape>();
     private readonly Game game;
     private readonly System.Random rng = new System.Random();
+    private Shape? lastShape;
 
     public ShapeCreator()
     {
@@ -13,17 +16,35 @@ public class ShapeCreator
 
     public Shape GenerateNextShape()
     {
-        var texture = game.ValidShapes[rng.Next(0, game.ValidShapes.Length)];
-
-        var blocks = new bool[texture.width, texture.height];
-        for (int w=0; w<texture.width; w++)
+        Texture2D texture;
+        string name;
+        do
         {
-            for (int h = 0; h < texture.height; h++)
+            texture = game.ValidShapes[rng.Next(0, game.ValidShapes.Length)];
+            name = texture.name;
+        } while (lastShape.HasValue && lastShape.Value.Name == name);
+
+        var pixels = texture.GetPixels();
+        var width = texture.width;
+        var height = texture.height;
+
+        Shape shape;
+        if (!cache.TryGetValue(name, out shape))
+        {
+            var blocks = new bool[width, height];
+            for (int w = 0; w < width; w++)
             {
-                blocks[w, h] = texture.GetPixel(w,h) != Color.black;
+                for (int h = 0; h < height; h++)
+                {
+                    blocks[w, h] = pixels[h * width + w] != Color.black;
+                }
             }
+
+            shape = new Shape(name, blocks, width, height);
+            cache.Add(name, shape);
         }
-        
-        return new Shape(blocks, texture.width, texture.height);
+
+        lastShape = shape;
+        return shape;
     }
 }

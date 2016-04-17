@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 484464}
   m_Layer: 8
   m_Name: arm_r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,6 @@ GameObject:
   - 65: {fileID: 6586268}
   - 23: {fileID: 2323540}
   - 114: {fileID: 11498022}
-  - 54: {fileID: 5443258}
   m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Player
@@ -71,7 +70,7 @@ GameObject:
   - 114: {fileID: 11401408}
   m_Layer: 8
   m_Name: foot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +91,7 @@ GameObject:
   - 114: {fileID: 11454444}
   m_Layer: 8
   m_Name: lower
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &127762
 GameObject:
   m_ObjectHideFlags: 1
@@ -133,7 +132,7 @@ GameObject:
   - 114: {fileID: 11430334}
   m_Layer: 8
   m_Name: upper
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +149,6 @@ GameObject:
   - 65: {fileID: 6522454}
   - 23: {fileID: 2317276}
   - 114: {fileID: 11427986}
-  - 54: {fileID: 5484964}
   m_Layer: 8
   m_Name: pelvis
   m_TagString: Player
@@ -170,7 +168,6 @@ GameObject:
   - 65: {fileID: 6562120}
   - 23: {fileID: 2310206}
   - 114: {fileID: 11425642}
-  - 54: {fileID: 5445744}
   m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Player
@@ -190,7 +187,6 @@ GameObject:
   - 135: {fileID: 13547184}
   - 23: {fileID: 2304948}
   - 114: {fileID: 11456224}
-  - 54: {fileID: 5417860}
   m_Layer: 8
   m_Name: Sphere
   m_TagString: Player
@@ -234,7 +230,7 @@ GameObject:
   - 114: {fileID: 11467888}
   m_Layer: 8
   m_Name: lower
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,7 +247,7 @@ GameObject:
   - 120: {fileID: 12039232}
   m_Layer: 8
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,7 +268,7 @@ GameObject:
   - 114: {fileID: 11421688}
   m_Layer: 8
   m_Name: upper
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,7 +289,7 @@ GameObject:
   - 114: {fileID: 11425586}
   m_Layer: 8
   m_Name: foot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,7 +310,7 @@ GameObject:
   - 114: {fileID: 11427312}
   m_Layer: 8
   m_Name: upper
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,7 +327,6 @@ GameObject:
   - 135: {fileID: 13505788}
   - 23: {fileID: 2353476}
   - 114: {fileID: 11405072}
-  - 54: {fileID: 5435630}
   m_Layer: 8
   m_Name: arse_r
   m_TagString: Player
@@ -358,7 +353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &146544
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +364,7 @@ GameObject:
   - 4: {fileID: 444064}
   m_Layer: 8
   m_Name: leg_r
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,7 +381,6 @@ GameObject:
   - 135: {fileID: 13597886}
   - 23: {fileID: 2360970}
   - 114: {fileID: 11437512}
-  - 54: {fileID: 5456418}
   m_Layer: 8
   m_Name: Sphere (6)
   m_TagString: Player
@@ -406,7 +400,6 @@ GameObject:
   - 135: {fileID: 13525064}
   - 23: {fileID: 2340668}
   - 114: {fileID: 11402814}
-  - 54: {fileID: 5400426}
   m_Layer: 8
   m_Name: Sphere (4)
   m_TagString: Player
@@ -433,7 +426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &156510
 GameObject:
   m_ObjectHideFlags: 1
@@ -450,7 +443,7 @@ GameObject:
   - 114: {fileID: 11452384}
   m_Layer: 8
   m_Name: lower
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,7 +504,7 @@ GameObject:
   - 114: {fileID: 11497124}
   m_Layer: 8
   m_Name: head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -526,6 +519,7 @@ GameObject:
   - 4: {fileID: 499322}
   - 54: {fileID: 5457986}
   - 144: {fileID: 14472790}
+  - 114: {fileID: 11408326}
   m_Layer: 8
   m_Name: upper
   m_TagString: Player
@@ -542,6 +536,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 482180}
   - 54: {fileID: 5489170}
+  - 114: {fileID: 11456330}
   m_Layer: 8
   m_Name: lower
   m_TagString: Player
@@ -565,7 +560,7 @@ GameObject:
   - 114: {fileID: 11491616}
   m_Layer: 8
   m_Name: lower
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -580,7 +575,7 @@ GameObject:
   - 4: {fileID: 417274}
   m_Layer: 8
   m_Name: leg_l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,7 +592,6 @@ GameObject:
   - 135: {fileID: 13580220}
   - 23: {fileID: 2377892}
   - 114: {fileID: 11482724}
-  - 54: {fileID: 5468342}
   m_Layer: 8
   m_Name: Sphere (2)
   m_TagString: Player
@@ -615,7 +609,7 @@ GameObject:
   - 4: {fileID: 412606}
   m_Layer: 8
   m_Name: arm_l
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,7 +630,7 @@ GameObject:
   - 114: {fileID: 11430450}
   m_Layer: 8
   m_Name: hand
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,7 +647,6 @@ GameObject:
   - 135: {fileID: 13531410}
   - 23: {fileID: 2309672}
   - 114: {fileID: 11401306}
-  - 54: {fileID: 5427514}
   m_Layer: 8
   m_Name: Sphere (1)
   m_TagString: Player
@@ -673,7 +666,6 @@ GameObject:
   - 135: {fileID: 13564688}
   - 23: {fileID: 2307996}
   - 114: {fileID: 11413950}
-  - 54: {fileID: 5446624}
   m_Layer: 8
   m_Name: arse_l
   m_TagString: Player
@@ -713,7 +705,6 @@ GameObject:
   - 65: {fileID: 6515328}
   - 23: {fileID: 2315568}
   - 114: {fileID: 11472552}
-  - 54: {fileID: 5437288}
   m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Player
@@ -733,7 +724,6 @@ GameObject:
   - 135: {fileID: 13521684}
   - 23: {fileID: 2382152}
   - 114: {fileID: 11424002}
-  - 54: {fileID: 5496270}
   m_Layer: 8
   m_Name: Sphere (5)
   m_TagString: Player
@@ -757,7 +747,7 @@ GameObject:
   - 114: {fileID: 11427398}
   m_Layer: 8
   m_Name: hand
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -774,7 +764,6 @@ GameObject:
   - 135: {fileID: 13526598}
   - 23: {fileID: 2337032}
   - 114: {fileID: 11485198}
-  - 54: {fileID: 5446844}
   m_Layer: 8
   m_Name: Sphere (3)
   m_TagString: Player
@@ -798,7 +787,7 @@ GameObject:
   - 114: {fileID: 11419368}
   m_Layer: 8
   m_Name: upper
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,7 +802,7 @@ GameObject:
   - 4: {fileID: 474676}
   m_Layer: 8
   m_Name: body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -837,7 +826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &198494
 GameObject:
   m_ObjectHideFlags: 1
@@ -2632,21 +2621,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &5400426
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148274}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &5402912
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2722,36 +2696,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &5417860
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 132224}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5427514
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169556}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &5428158
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2812,81 +2756,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 2
   m_CollisionDetection: 0
---- !u!54 &5435630
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 144246}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5437288
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182872}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5443258
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122844}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5445744
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131336}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5446624
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176332}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &5446712
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -2896,36 +2765,6 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5446844
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 189506}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5456418
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147972}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -2986,21 +2825,6 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 10
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5468342
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 164626}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -3112,21 +2936,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &5484964
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130706}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!54 &5489170
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -3166,21 +2975,6 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 10
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!54 &5496270
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184104}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 0
@@ -3431,6 +3225,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakForce: 1
   handle: {fileID: 0}
+--- !u!114 &11408326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2b94ef68aab384389db9b6910e8c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakForce: 1
+  handle: {fileID: 0}
 --- !u!114 &11413950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3626,6 +3433,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakForce: 1
   handle: {fileID: 0}
+--- !u!114 &11456330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2b94ef68aab384389db9b6910e8c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakForce: 1
+  handle: {fileID: 0}
 --- !u!114 &11467888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3689,6 +3509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946160dec82f7fb498d41f289643f7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: 5000
 --- !u!114 &11491616
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BodyCollision : MonoBehaviour {
+public class BodyCollision : BaseCollider {
 
     private GameObject player;
     private GameObject destroyedPlayer;
@@ -23,6 +23,8 @@ public class BodyCollision : MonoBehaviour {
             MoveToDestroyed(children[i].gameObject);
             AddBody(children[i].gameObject);
         }
+
+        player.GetComponent<BloodController>().ActivateAll();
     }
 
     void RemoveAllHandles() {
@@ -40,10 +42,12 @@ public class BodyCollision : MonoBehaviour {
     }
 
     void MoveToDestroyed(GameObject go) {
+        if (go.tag == "Blood") return;
         go.transform.parent = (destroyedPlayer != null) ? destroyedPlayer.transform : null;
     }
 
     void AddBody(GameObject go) {
+        if (go.tag == "Blood") return;
         var body = go.GetComponent<Rigidbody>();
         if (body != null) {
             body = go.AddComponent<Rigidbody>();

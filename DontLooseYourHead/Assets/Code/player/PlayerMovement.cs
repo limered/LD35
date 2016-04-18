@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         lineComponent = GetComponent<LineRenderer>();
+        Input.simulateMouseWithTouches = true;
     }
 
     private void Update()
@@ -105,7 +106,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 GetRayCastPoint(float dist)
     {
-        return Camera.main.ScreenPointToRay(Input.mousePosition).GetPoint(dist);
+        var pos = Input.mousePosition;
+        //if (Input.touches.Length > 0)
+        //    pos = Input.touches[0].position;
+        return Camera.main.ScreenPointToRay(pos).GetPoint(dist);
     }
 
     private float GetDistanceSq(GameObject handle, Vector3 rayPoint)

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    private Game game;
     public GameObject blockPrefab;
     public GameObject wallPrefab;
     public Vector3 direction = Vector3.back;
@@ -33,20 +34,22 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        game = IoC.Resolve<Game>();
+
         if (blockPrefab == null)
         {
             throw new Exception("no block prefab defined");
         }
 
         nextMaterial = GetRandomMaterial();
-        CreateNextWall().StartMoving();
+        CreateNextWall(game.StartShape).StartMoving();
     }
 
-    public Wall CreateNextWall()
+    public Wall CreateNextWall(Texture2D startShape=null)
     {
         var wallMat = nextMaterial;
 
-        var nextShape = IoC.Resolve<ShapeCreator>().GenerateNextShape();
+        var nextShape = IoC.Resolve<ShapeCreator>().GenerateShape(startShape);
 
         var scale = blockPrefab.transform.localScale;
         var offset = gameObject.transform.position / 2f + new Vector3(scale.x * nextShape.Width / 2f, scale.y * nextShape.Height / 2f);

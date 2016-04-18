@@ -5,6 +5,8 @@ public class Game : MonoBehaviour
 {
     private Leaderboard leaderboard;
 
+    private AudioSource audio;
+
     [SerializeField]
     private Texture2D startShape;
 
@@ -22,7 +24,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         leaderboard = IoC.Resolve<Leaderboard>();
-
+        audio = gameObject.GetComponent<AudioSource>();
         StartGame();
     }
 
@@ -40,5 +42,15 @@ public class Game : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void SlowdownMusic()
+    {
+        audio.pitch = 0.1f;
+    }
+
+    public void SpeedupMusic()
+    {
+        audio.pitch = 1f;
     }
 }

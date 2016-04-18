@@ -56,6 +56,8 @@ public class Player : MonoBehaviour
 
         FloatRate += bloodDictionary[partName];
         alreadyRemovedDictionary.Add(GetDictionaryKey(partName, side), true);
+
+        PlayHitSound();
     }
 
     private string GetDictionaryKey(string partName, int side)
@@ -78,6 +80,14 @@ public class Player : MonoBehaviour
         tempPoints = score;
 
         Debug.DrawLine(new Vector3(boundsRect.xMin, boundsRect.yMin, 0), new Vector3(boundsRect.xMax, boundsRect.yMax, 0));
+    }
+
+    private void PlayHitSound()
+    {
+        var sound = gameObject.GetComponent<AudioSource>();
+        var pitch = Random.value*1f - 0.5f;
+        sound.pitch = 1f + pitch;
+        sound.PlayOneShot(sound.clip);
     }
 
     private void CheckPositionAgainstRect(Transform trans, ref Rect boundRect)

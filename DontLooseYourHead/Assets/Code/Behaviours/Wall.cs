@@ -43,6 +43,8 @@ public class Wall : MonoBehaviour
                 {
                     timeLeft = 0f;
                     wallState = WallState.InSlowmotion;
+                    IoC.Resolve<SoundComponent>().PlaySlowdown();
+                    IoC.Resolve<Game>().SlowdownMusic();
                 }
 
                 timeLeft = Mathf.Clamp(timeLeft + Time.deltaTime, 0f, lerpInTime);
@@ -58,6 +60,8 @@ public class Wall : MonoBehaviour
                     wallState = WallState.AfterSlowmotion;
                     timeLeft = lerpInTime;
                     body.isKinematic = false;
+                    IoC.Resolve<SoundComponent>().PlaySpeedup();
+                    IoC.Resolve<Game>().SpeedupMusic();
                 }
 
                 timeLeft = Mathf.Clamp(timeLeft - Time.deltaTime, 0f, lerpInTime);

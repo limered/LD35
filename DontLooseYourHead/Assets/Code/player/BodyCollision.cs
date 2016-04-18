@@ -25,6 +25,7 @@ public class BodyCollision : BaseCollider {
         }
 
         player.GetComponent<BloodController>().ActivateAll();
+        AddFloatRate();
     }
 
     void RemoveAllHandles() {

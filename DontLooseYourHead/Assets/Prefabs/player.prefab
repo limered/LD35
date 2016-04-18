@@ -2057,7 +2057,7 @@ Transform:
   m_GameObject: {fileID: 137028}
   m_LocalRotation: {x: -0.021680858, y: 0.7063642, z: 0.70047253, w: 0.099588595}
   m_LocalPosition: {x: 0.01, y: 1.01, z: -0.06}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 466670}
   - {fileID: 416874}
@@ -2073,7 +2073,7 @@ Transform:
   m_GameObject: {fileID: 166680}
   m_LocalRotation: {x: -0.7071068, y: -0.000000029802326, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0.032856163, y: 0.755, z: -0.03461512}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 461598}
   - {fileID: 400742}
@@ -2301,7 +2301,7 @@ Transform:
   m_GameObject: {fileID: 141448}
   m_LocalRotation: {x: 0.7071068, y: -0.00000005960465, z: 0, w: 0.70710677}
   m_LocalPosition: {x: -0.079, y: -1.0040002, z: -0.007}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 494250}
   - {fileID: 468590}
@@ -2395,7 +2395,7 @@ Transform:
   m_GameObject: {fileID: 196392}
   m_LocalRotation: {x: 0.7071069, y: 0.00000007450581, z: 0.00000004470349, w: 0.70710665}
   m_LocalPosition: {x: -0.01, y: -0.997, z: -0.01}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 439518}
   - {fileID: 455812}
@@ -2435,7 +2435,7 @@ Transform:
   m_GameObject: {fileID: 152814}
   m_LocalRotation: {x: 0.7071068, y: -0.000000029802326, z: 0, w: 0.70710677}
   m_LocalPosition: {x: 0.0028571167, y: -0.64, z: -0.0028571424}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 409524}
   - {fileID: 473702}
@@ -2528,7 +2528,7 @@ Transform:
   m_GameObject: {fileID: 138980}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.01, y: -0.997, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 458056}
   - {fileID: 487942}
@@ -2604,7 +2604,7 @@ Transform:
   m_GameObject: {fileID: 122152}
   m_LocalRotation: {x: 0.030740382, y: 0.00054663426, z: -0.017770331, w: 0.99936926}
   m_LocalPosition: {x: -0.05500002, y: 0.091612525, z: 0.5074998}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 496178}
   - {fileID: 497866}
@@ -2620,7 +2620,7 @@ Transform:
   m_GameObject: {fileID: 126664}
   m_LocalRotation: {x: 0.7660445, y: 0, z: 0, w: 0.6427876}
   m_LocalPosition: {x: 0.1, y: -0.473, z: 0.11}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 414500}
   - {fileID: 427586}
@@ -2787,7 +2787,7 @@ Transform:
   m_GameObject: {fileID: 192404}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.008, y: 0.952, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 473630}
   - {fileID: 417814}
@@ -2827,7 +2827,7 @@ Transform:
   m_GameObject: {fileID: 170884}
   m_LocalRotation: {x: -0.017770337, y: 0.99936926, z: -0.030740377, w: -0.00054681307}
   m_LocalPosition: {x: -0.04250002, y: 0.091612525, z: -0.5274997}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 450058}
   - {fileID: 420438}
@@ -2978,7 +2978,7 @@ Transform:
   m_GameObject: {fileID: 106072}
   m_LocalRotation: {x: -0.7071068, y: -0.00000046080928, z: -0.00000046080928, w: 0.7071067}
   m_LocalPosition: {x: -0.008, y: 1.015, z: -0}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 417478}
   - {fileID: 402680}
@@ -3019,7 +3019,7 @@ Transform:
   m_GameObject: {fileID: 193162}
   m_LocalRotation: {x: 0.6427877, y: 0, z: 0, w: 0.7660444}
   m_LocalPosition: {x: 0.1, y: -0.473, z: -0.14}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 478354}
   - {fileID: 413980}
@@ -3160,7 +3160,7 @@ Transform:
   m_GameObject: {fileID: 174572}
   m_LocalRotation: {x: -0.707224, y: 0.008498923, z: -0.12927341, w: 0.69501823}
   m_LocalPosition: {x: 0.01, y: 0.963, z: 0.05}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 472692}
   - {fileID: 471252}
@@ -3498,7 +3498,7 @@ Transform:
   m_GameObject: {fileID: 152080}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -0.079, y: -1.004, z: -0.015}
-  m_LocalScale: {x: 0.04, y: 0.04, z: 0.04}
+  m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_Children:
   - {fileID: 409390}
   - {fileID: 476280}
@@ -5902,6 +5902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53a23541af0fc9b439765c3ba2240483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blood: 5000
+  FloatRate: 0
+  tempPoints: 0
 --- !u!114 &11407964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5914,6 +5917,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 126664}
+  partName: Leg_Upper
+  side: 2
   isLast: 0
   isMiddle: 0
   isFirst: 1
@@ -5932,6 +5937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 152814}
+  partName: 
+  side: 0
   handlesToDelete:
   - {fileID: 157392}
   - {fileID: 112548}
@@ -5953,6 +5960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 193162}
+  partName: Leg_Upper
+  side: 1
   isLast: 0
   isMiddle: 0
   isFirst: 1
@@ -5971,6 +5980,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11413570
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5983,6 +5994,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11417048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5995,6 +6008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11420938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6007,6 +6022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11422632
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6019,6 +6036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11428360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6031,6 +6050,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 196392}
+  partName: Foot
+  side: 2
   isLast: 1
   isMiddle: 0
   isFirst: 0
@@ -6049,6 +6070,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 141448}
+  partName: Leg_Lower
+  side: 2
   isLast: 0
   isMiddle: 1
   isFirst: 0
@@ -6067,6 +6090,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 192404}
+  partName: Arm_Lower
+  side: 1
   isLast: 0
   isMiddle: 1
   isFirst: 0
@@ -6085,6 +6110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11440294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6097,6 +6124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11443408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6109,6 +6138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: Head
+  side: 2
   breakForce: 1
   handle: {fileID: 0}
 --- !u!114 &11450958
@@ -6123,6 +6154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 122152}
+  partName: Arm_Upper
+  side: 1
   isLast: 0
   isMiddle: 0
   isFirst: 1
@@ -6141,6 +6174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 152814}
+  partName: 
+  side: 0
   handlesToDelete:
   - {fileID: 157392}
   - {fileID: 112548}
@@ -6161,7 +6196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce14e7f816d6a84ea4c39b4376dff1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodArray:
+  BloodArray:
   - {fileID: 192404}
   - {fileID: 174572}
   - {fileID: 106072}
@@ -6188,6 +6223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 106072}
+  partName: Arm_Lower
+  side: 2
   isLast: 0
   isMiddle: 1
   isFirst: 0
@@ -6206,6 +6243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 152814}
+  partName: 
+  side: 0
   handlesToDelete:
   - {fileID: 157392}
   - {fileID: 112548}
@@ -6227,6 +6266,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11470906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6239,6 +6280,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11472720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6251,6 +6294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 166680}
+  partName: Head
+  side: 1
 --- !u!114 &11478376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6263,6 +6308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: 
+  side: 0
 --- !u!114 &11479536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6275,6 +6322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 152080}
+  partName: Leg_Lower
+  side: 1
   isLast: 0
   isMiddle: 1
   isFirst: 0
@@ -6293,6 +6342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 170884}
+  partName: Arm_Upper
+  side: 2
   isLast: 0
   isMiddle: 0
   isFirst: 1
@@ -6311,6 +6362,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 138980}
+  partName: Foot
+  side: 1
   isLast: 1
   isMiddle: 0
   isFirst: 0
@@ -6329,6 +6382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 137028}
+  partName: Hand
+  side: 2
   isLast: 1
   isMiddle: 0
   isFirst: 0
@@ -6358,6 +6413,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 0}
+  partName: Pelvis
+  side: 1
   handlesToDelete: []
   legs: []
 --- !u!114 &11497090
@@ -6372,6 +6429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bloodEmitterToActivate: {fileID: 174572}
+  partName: Hand
+  side: 1
   isLast: 1
   isMiddle: 0
   isFirst: 0

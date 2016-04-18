@@ -45,6 +45,7 @@ public class LimpCollision : BaseCollider
         }
 
         ActivateBloodEmitter();
+        AddFloatRate();
     }
 
     private void RemoveJoints()

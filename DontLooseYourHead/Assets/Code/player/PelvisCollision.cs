@@ -25,6 +25,7 @@ public class PelvisCollision : BaseCollider
         MoveToDestroyed();
 
         ActivateBloodEmitter();
+        AddFloatRate();
     }
 
     private void RemoveHandles()

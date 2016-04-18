@@ -37,6 +37,7 @@ public class DestroyComponent : BaseCollider
             }
 
             ActivateBloodEmitter();
+            AddFloatRate();
         }
     }
 

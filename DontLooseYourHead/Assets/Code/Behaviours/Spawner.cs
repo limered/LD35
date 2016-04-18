@@ -148,6 +148,8 @@ public class Spawner : MonoBehaviour
         {
             Destroy(currentWall.gameObject);
             currentWall = null;
+
+            IoC.Resolve<Game>().UpdateScore();
         }
     }
     

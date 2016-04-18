@@ -6,6 +6,7 @@ public class Game : MonoBehaviour
     private Leaderboard leaderboard;
 
     private AudioSource audio;
+    public float points = 0;
 
     [SerializeField]
     private Texture2D startShape;
@@ -52,5 +53,10 @@ public class Game : MonoBehaviour
     public void SpeedupMusic()
     {
         audio.pitch = 1f;
+    }
+
+    public void UpdateScore()
+    {
+        points += IoC.Resolve<Player>().tempPoints;
     }
 }

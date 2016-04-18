@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
     public GameObject wallPrefab;
     public Vector3 direction = Vector3.back;
 
+    private bool isRunning = true;
+
     [SerializeField]
     private float wallSpeed = 5f;
 
@@ -139,6 +141,16 @@ public class Spawner : MonoBehaviour
 
     void Update()
     {
+        if (!isRunning)
+        {
+            if (currentWall != null)
+            {
+                Destroy(currentWall.gameObject);
+                currentWall = null;
+            }
+            return;
+        }
+
         if (currentWall == null || !currentWall.isActiveAndEnabled)
         {
             CreateNextWall().StartMoving();
@@ -164,5 +176,10 @@ public class Spawner : MonoBehaviour
         }
 
         return mat;
+    }
+
+    public void Stop()
+    {
+        isRunning = false;
     }
 }

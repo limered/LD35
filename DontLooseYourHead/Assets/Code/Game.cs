@@ -15,6 +15,7 @@ public class Game : MonoBehaviour
 
     [SerializeField]
     private Texture2D[] validShapes;
+
     public Texture2D[] ValidShapes { get { return validShapes; } }
 
     public Game()
@@ -22,7 +23,7 @@ public class Game : MonoBehaviour
         IoC.RegisterSingleton<Game>(this);
     }
 
-    void Start()
+    private void Start()
     {
         leaderboard = IoC.Resolve<Leaderboard>();
         audio = gameObject.GetComponent<AudioSource>();
@@ -38,7 +39,6 @@ public class Game : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
 
     public void QuitGame()
     {
@@ -58,5 +58,18 @@ public class Game : MonoBehaviour
     public void UpdateScore()
     {
         points += IoC.Resolve<Player>().tempPoints;
+    }
+
+    public void EndGame()
+    {
+        var handles = GameObject.FindGameObjectsWithTag("Handle");
+        foreach (var handle in handles)
+        {
+            handle.SetActive(false);
+        }
+
+        IoC.Resolve<Spawner>().Stop();
+        IoC.Resolve<SoundComponent>().PlaySlowdown();
+        audio.Stop();
     }
 }

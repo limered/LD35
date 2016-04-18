@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         if (Blood - FloatRate*Time.deltaTime * 10 <= 0)
         {
             Blood = 0;
-            IoC.Resolve<Game>().RestartGame();
+            IoC.Resolve<Game>().EndGame();
             return;
         }
         Blood -= FloatRate*Time.deltaTime * 10;

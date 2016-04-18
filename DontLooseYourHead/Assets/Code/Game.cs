@@ -69,7 +69,6 @@ public class Game : MonoBehaviour
         }
 
         IoC.Resolve<Spawner>().Stop();
-        IoC.Resolve<SoundComponent>().PlaySlowdown();
         audio.Stop();
     }
 }

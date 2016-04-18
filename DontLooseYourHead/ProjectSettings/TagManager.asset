@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Handle
   - Wall
+  - Blood
   layers:
   - Default
   - TransparentFX

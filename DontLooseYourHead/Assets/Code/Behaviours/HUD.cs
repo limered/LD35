@@ -15,6 +15,9 @@ public class HUD : MonoBehaviour
     private Text endScoreText;
 
     [SerializeField]
+    private Text bloodText;
+
+    [SerializeField]
     private GameObject gameOverPanel;
 
     private float score;
@@ -47,6 +50,20 @@ public class HUD : MonoBehaviour
         }
     }
 
+    private float blood;
+    public float Blood
+    {
+        get
+        {
+            return blood;
+        }
+        set
+        {
+            blood = value;
+            bloodText.text = ((int)blood).ToString(CultureInfo.InvariantCulture)+ " ml";
+        }
+    }
+
     public HUD()
     {
         IoC.RegisterSingleton(this);
@@ -64,13 +81,10 @@ public class HUD : MonoBehaviour
         gameOverPanel.SetActive(false);
     }
 
-    private float test;
     void Update()
     {
-        test += Time.deltaTime;
-        if (test>5)
-        {
-            ShowGameOverScreen();
-        }
+        var player = IoC.Resolve<Player>();
+        NextScore = player.tempPoints;
+        Blood = player.Blood;
     }
 }

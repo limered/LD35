@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fda607b7023b03499db9f0e61ffdb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  points: 0
   startShape: {fileID: 2800000, guid: 97d9fb4030255204aab067c569c1c583, type: 3}
   validShapes:
   - {fileID: 2800000, guid: 39cf2c20c8a39b94a8c47cfb8ed4a3c5, type: 3}

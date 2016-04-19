@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
     private Leaderboard leaderboard;
+    private HUD hud;
 
     private AudioSource audio;
     public float points = 0;
@@ -26,6 +27,7 @@ public class Game : MonoBehaviour
     private void Start()
     {
         leaderboard = IoC.Resolve<Leaderboard>();
+        hud = IoC.Resolve<HUD>();
         audio = gameObject.GetComponent<AudioSource>();
         StartGame();
     }
@@ -58,6 +60,7 @@ public class Game : MonoBehaviour
     public void UpdateScore()
     {
         points += IoC.Resolve<Player>().tempPoints;
+        hud.Score = points;
     }
 
     public void EndGame()
@@ -70,5 +73,8 @@ public class Game : MonoBehaviour
 
         IoC.Resolve<Spawner>().Stop();
         audio.Stop();
+        hud.ShowGameOverScreen();
+
+        IoC.Resolve<Leaderboard>().NewScore(points);
     }
 }

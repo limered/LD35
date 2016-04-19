@@ -21,6 +21,7 @@ public class LeaderboardView : MonoBehaviour
 
     void Start()
     {
+        if (loadingPanel != null) loadingPanel.SetActive(true);
         leaderboard = IoC.Resolve<Leaderboard>();
 
         ranks.Clear();

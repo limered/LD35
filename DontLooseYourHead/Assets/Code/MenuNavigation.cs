@@ -4,34 +4,27 @@ using UnityEngine.SceneManagement;
 
 public class MenuNavigation : MonoBehaviour
 {
+    public const int MainMenuScene = 0;
+    public const int LeaderboardScene = 1;
+    public const int GameScene = 2;
+
     public MenuNavigation()
     {
         IoC.RegisterSingleton<MenuNavigation>(this);
     }
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
-
-
     public void NavigateToMainMenu()
     {
-        SceneManager.LoadScene("main_menu");
+        SceneManager.LoadScene(MainMenuScene);
     }
 
     public void NavigateToLeaderboard()
     {
-        SceneManager.LoadScene("leaderboard");
+        SceneManager.LoadScene(LeaderboardScene);
     }
 
     public void NavigateToGame()
     {
-        SceneManager.LoadScene("base");
+        SceneManager.LoadScene(GameScene);
     }
 }

@@ -88,10 +88,10 @@ public class Leaderboard
     {
         App42API.Initialize(
             //API Key
-            "083addb87189cffe6604aa3036dfedf29369ebbfa0bae8edc91e7b0c9c727003"
+            "9ae48434b88648668cbe129b046a7cba818fc098fc92121947bf695708cb643c"
             ,
             //Secret
-            "fd0cf72bb1850414b9624eaa3d679d91e6de7fc51ce5dd064088652923fcbafe"
+            "269d1c3989f5a113d476013ed3471d3ebe721c5c76c5a52948ed2c5b1e82344c"
             );
 
         gameService = App42API.BuildGameService();

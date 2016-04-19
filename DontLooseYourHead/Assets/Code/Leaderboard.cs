@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using com.shephertz.app42.paas.sdk.csharp;
+﻿using com.shephertz.app42.paas.sdk.csharp;
 using com.shephertz.app42.paas.sdk.csharp.game;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Leaderboard
@@ -19,7 +19,7 @@ public class Leaderboard
     private ScoreBoardService scoreBoardService;
     private string playerName;
     private string playerSuffix;
-    public string PlayerNameLong { get { return playerName+"#"+playerSuffix; } }
+    public string PlayerNameLong { get { return playerName + "#" + playerSuffix; } }
 
     public bool IsInitializing { get; set; }
     private float highscore;
@@ -31,8 +31,8 @@ public class Leaderboard
         get { return highscore; }
         set
         {
-            highscore = value; 
-            PlayerPrefs.SetFloat("highscore_"+PlayerName, highscore);
+            highscore = value;
+            PlayerPrefs.SetFloat("highscore_" + PlayerName, highscore);
             PlayerPrefs.Save();
         }
     }
@@ -54,8 +54,8 @@ public class Leaderboard
         get { return rank; }
         set
         {
-            rank = value; 
-            PlayerPrefs.GetString("rank_"+PlayerName, rank);
+            rank = value;
+            PlayerPrefs.GetString("rank_" + PlayerName, rank);
             PlayerPrefs.Save();
         }
     }
@@ -113,44 +113,44 @@ public class Leaderboard
                                 Debug.Log("game created");
                                 whenDone();
                             },
-                            noInternet => {}));
+                            noInternet => { }));
                 }
                 ));
     }
 
     private void Init()
     {
-        ReadPlayerData(()=> GetTopRankings(10, (list, err) =>
-        {
-            if (list != null)
-            {
-                board.Clear();
+        ReadPlayerData(() => GetTopRankings(10, (list, err) =>
+         {
+             if (list != null)
+             {
+                 board.Clear();
 
-                foreach (var score in list)
-                {
-                    board.Add(new Ranking
-                    {
-                        name = score.userName,
-                        highscore = (float)score.value,
-                        rank = score.rank
-                    });
-                }
+                 foreach (var score in list)
+                 {
+                     board.Add(new Ranking
+                     {
+                         name = score.userName,
+                         highscore = (float)score.value,
+                         rank = score.rank
+                     });
+                 }
 
-                IsInitializing = false;
-            }
-            else Debug.LogError(err);
-        }));
+                 IsInitializing = false;
+             }
+             else Debug.LogError(err);
+         }));
     }
 
     private void ReadPlayerData(Action whenDone)
     {
         ReadSettings(out playerName, out playerSuffix, out highscore, out rank);
 
-        GetHighscore((hs, err)=>
+        GetHighscore((hs, err) =>
         {
             if (hs != null)
             {
-                highscore = (float) hs.value;
+                highscore = (float)hs.value;
                 rank = hs.rank;
             }
             else
@@ -176,7 +176,7 @@ public class Leaderboard
         PlayerPrefs.Save();
     }
 
-    public void CreateNewPlayer(string name=null)
+    public void CreateNewPlayer(string name = null)
     {
         name = string.IsNullOrEmpty(name) || string.IsNullOrEmpty(name.Trim()) ? "LD35" : name;
         PlayerPrefs.SetString("playerName", name);

@@ -57,14 +57,15 @@ public class LeaderboardView : MonoBehaviour
         {
             if (i < ranks.Count)
             {
+                var rangi = i + 1;
                 ranks[i].name.text = board[i].name.Contains("#") 
                     && board[i].name.LastIndexOf("#", StringComparison.InvariantCulture) < board[i].name.Length 
-                        ? board[i].name.Substring(0, board[i].name.LastIndexOf("#", StringComparison.InvariantCulture))
-                        : board[i].name;
+                        ? rangi.ToString() + ". " + board[i].name.Substring(0, board[i].name.LastIndexOf("#", StringComparison.InvariantCulture))
+                        : rangi.ToString() + ". " + board[i].name;
                 ranks[i].score.text = board[i].highscore.ToString();
             }
         }
 
-        highscoreText.text = leaderboard.PlayerName + ": " + leaderboard.Highscore;
+        highscoreText.text = leaderboard.PlayerName + "'s Heighscore: " + leaderboard.Highscore;
     }
 }

@@ -1577,6 +1577,38 @@ Prefab:
       propertyPath: m_CharacterValidation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_Color.g
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_Color.b
+      value: 0.5147059
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402318, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
+      propertyPath: m_Text
+      value: Don't Loose Your Head!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce30cdb88fb93f848b0ac7488ebc0798, type: 2}
   m_IsPrefabParent: 0

@@ -1,13 +1,12 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Globalization;
+﻿using System.Globalization;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-
     [SerializeField]
     private Text scoreText;
+
     [SerializeField]
     private Text nextScoreText;
 
@@ -31,7 +30,8 @@ public class HUD : MonoBehaviour
         }
         set
         {
-            score = value;
+            //score = value;
+            score = Mathf.Round(value * 100f) / 100f;
             scoreText.text = score.ToString(CultureInfo.InvariantCulture);
             endScoreText.text = score.ToString(CultureInfo.InvariantCulture);
         }
@@ -45,12 +45,13 @@ public class HUD : MonoBehaviour
         }
         set
         {
-            nextScore = value;
-            nextScoreText.text = "+ "+nextScore.ToString(CultureInfo.InvariantCulture);
+            nextScore = Mathf.Round(value * 100f) / 100f; ;
+            nextScoreText.text = "+ " + nextScore.ToString(CultureInfo.InvariantCulture);
         }
     }
 
     private float blood;
+
     public float Blood
     {
         get
@@ -60,7 +61,7 @@ public class HUD : MonoBehaviour
         set
         {
             blood = value;
-            bloodText.text = ((int)blood).ToString(CultureInfo.InvariantCulture)+ " ml";
+            bloodText.text = ((int)blood).ToString(CultureInfo.InvariantCulture) + " ml";
         }
     }
 
@@ -69,22 +70,23 @@ public class HUD : MonoBehaviour
         IoC.RegisterSingleton(this);
     }
 
-
     public void ShowGameOverScreen()
     {
         gameOverPanel.SetActive(true);
     }
 
-
-    void Start()
+    private void Start()
     {
         gameOverPanel.SetActive(false);
     }
 
-    void Update()
+    private void Update()
     {
-        var player = IoC.Resolve<Player>();
-        NextScore = player.tempPoints;
-        Blood = player.Blood;
+        if (Time.frameCount % 10 == 0)
+        {
+            var player = IoC.Resolve<Player>();
+            NextScore = player.tempPoints;
+            Blood = player.Blood;
+        }
     }
 }

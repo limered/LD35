@@ -238,6 +238,34 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1464901274}
+    - target: {fileID: 11444014, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452716, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11485398, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
+      propertyPath: m_UiScaleMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444014, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11457812, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431664, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11416494, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2d790cf4571ded41a2c27aa09b0dc0f, type: 2}
   m_IsPrefabParent: 0

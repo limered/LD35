@@ -5,27 +5,27 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    private Game game;
     public GameObject blockPrefab;
     public GameObject wallPrefab;
     public Vector3 direction = Vector3.back;
-    public int wallsAtTheSameTime = 5;
-    
 
-    [SerializeField]
-    private float spaceBetweenWalls = 100f;
+    private bool isRunning = true;
 
     [SerializeField]
     private float wallSpeed = 5f;
 
     [SerializeField]
-    private List<Wall> walls = new List<Wall>();
+    private Wall currentWall;
 
+    [SerializeField]
+    private MeshRenderer backgroundPlane;
 
     [SerializeField]
     private List<Material> materials = new List<Material>();
 
-
     private Material lastMaterial;
+    private Material nextMaterial;
     private int wallNr = 0;
     private readonly System.Random rng = new System.Random();
 
@@ -36,19 +36,22 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
+        game = IoC.Resolve<Game>();
+
         if (blockPrefab == null)
         {
             throw new Exception("no block prefab defined");
         }
 
-        walls.Add(CreateNextWall(spaceBetweenWalls));
+        nextMaterial = GetRandomMaterial();
+        CreateNextWall(game.StartShape).StartMoving();
     }
 
-    public Wall CreateNextWall(float deltaDistanceToSpawner)
+    public Wall CreateNextWall(Texture2D startShape=null)
     {
-        var wallMat = GetRandomMaterial();
+        var wallMat = nextMaterial;
 
-        var nextShape = IoC.Resolve<ShapeCreator>().GenerateNextShape();
+        var nextShape = IoC.Resolve<ShapeCreator>().GenerateShape(startShape);
 
         var scale = blockPrefab.transform.localScale;
         var offset = gameObject.transform.position / 2f + new Vector3(scale.x * nextShape.Width / 2f, scale.y * nextShape.Height / 2f);
@@ -58,21 +61,21 @@ public class Spawner : MonoBehaviour
         wallNr++;
         var wall = (GameObject)Instantiate(
                         wallPrefab,
-                        new Vector3(-nextShape.Width / 2f, -nextShape.Height / 2f, deltaDistanceToSpawner),
+                        new Vector3(-nextShape.Width / 2f, -nextShape.Height / 2f, 0f),
                         Quaternion.identity);
         wall.transform.parent = gameObject.transform;
         wall.transform.localScale = new Vector3(nextShape.Width, nextShape.Height, scale.y);
         wall.transform.localRotation = Quaternion.identity;
-        wall.transform.localPosition = new Vector3(0, 1, deltaDistanceToSpawner);
+        wall.transform.localPosition = new Vector3(0, 1, 0f);
         wall.name = "wall #" + wallNr;
 
+        //generate blocks
         var blocks = new GameObject("blocks");
         blocks.transform.parent = wall.transform;
         blocks.transform.localScale = Vector3.one;
         blocks.transform.localRotation = Quaternion.identity;
         blocks.transform.localPosition = new Vector3((nextShape.Width - scale.x) / 2f + (scale.x / 2f) / nextShape.Width, (nextShape.Height - scale.y) / 2f + (scale.y / 2f) / nextShape.Height);
 
-        //generate blocks
         for (int w = 0; w < nextShape.Width; w++)
         {
             for (int h = 0; h < nextShape.Height; h++)
@@ -92,51 +95,76 @@ public class Spawner : MonoBehaviour
             }
         }
 
-
+        int renderQIndex = 0;
         foreach (var ren in wall.GetComponentsInChildren<MeshRenderer>())
         {
             ren.material = wallMat;
+            ren.material.mainTextureOffset = new Vector2((float)rng.NextDouble(), (float)rng.NextDouble());
+            ren.material.renderQueue = renderQIndex++;
         }
 
-        var wallScript = wall.GetComponent<Wall>();
-        wallScript.speed = wallSpeed;
-        wall.AddComponent<Grow>().timeInSecs = 1f;
-        wall.AddComponent<Grow>().timeOffset = 0f;
-        return wallScript;
+        currentWall = wall.GetComponent<Wall>();
+        currentWall.speed = wallSpeed;
+        //wall.AddComponent<Grow>().timeInSecs = 1f;
+
+
+        lastMaterial = nextMaterial;
+        nextMaterial = GetRandomMaterial();
+        backgroundPlane.material = nextMaterial;
+
+        //CombineMeshes(currentWall.gameObject);
+
+        return currentWall;
+    }
+
+    private void CombineMeshes(GameObject wall)
+    {
+        MeshFilter[] meshFilters = wall.GetComponentsInChildren<MeshFilter>();
+        CombineInstance[] combine = new CombineInstance[meshFilters.Length];
+        int i = 0;
+        while (i < meshFilters.Length)
+        {
+            combine[i].mesh = meshFilters[i].sharedMesh;
+            combine[i].transform = meshFilters[i].transform.localToWorldMatrix;
+            meshFilters[i].gameObject.SetActive(false);
+            i++;
+        }
+        if (wall.transform.GetComponent<MeshFilter>() == null) wall.AddComponent<MeshFilter>();
+
+        
+        wall.GetComponent<MeshFilter>().mesh = new Mesh();
+        wall.GetComponent<MeshFilter>().mesh.CombineMeshes(combine, true);
+        wall.GetComponent<MeshCollider>().sharedMesh = wall.GetComponent<MeshFilter>().mesh;
+        wall.gameObject.SetActive(true);
+        wall.transform.DetachChildren();
     }
 
     void Update()
     {
-        if (NeedToPlaceNextWall)
+        if (!isRunning)
         {
-            walls.Add(CreateNextWall(
-                walls.Any() 
-                ? walls.Last().transform.localPosition.z + spaceBetweenWalls
-                : spaceBetweenWalls
-                ));
+            if (currentWall != null)
+            {
+                Destroy(currentWall.gameObject);
+                currentWall = null;
+            }
+            return;
         }
 
-        while (walls.Any() 
-            && Mathf.Abs(walls.First().transform.localPosition.z - gameObject.transform.localPosition.z) > spaceBetweenWalls*2f)
+        if (currentWall == null || !currentWall.isActiveAndEnabled)
         {
-            var w = walls.First();
-            walls.RemoveAt(0);
-            Destroy(w.gameObject);
+            CreateNextWall().StartMoving();
         }
-    }
 
-    private bool NeedToPlaceNextWall
-    {
-        get
+        if (currentWall != null && currentWall.transform.position.z < Camera.main.transform.position.z)
         {
-            var wallsBeforeMe = walls.Count(x=>x.transform.localPosition.z > gameObject.transform.localPosition.z);
-            var lastWall = walls.LastOrDefault();
-            return
-                wallsBeforeMe < wallsAtTheSameTime;
-                //|| Mathf.Abs(lastWall.transform.localPosition.z-gameObject.transform.localPosition.z) < spaceBetweenWalls;
+            Destroy(currentWall.gameObject);
+            currentWall = null;
+
+            IoC.Resolve<Game>().UpdateScore();
         }
     }
-
+    
     private Material GetRandomMaterial()
     {
         var mat = lastMaterial;
@@ -147,6 +175,11 @@ public class Spawner : MonoBehaviour
             mat = materials[rng.Next(0, materials.Count)];
         }
 
-        return lastMaterial = mat;
+        return mat;
+    }
+
+    public void Stop()
+    {
+        isRunning = false;
     }
 }

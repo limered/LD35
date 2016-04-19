@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
@@ -54,7 +55,10 @@ public class LeaderboardView : MonoBehaviour
         {
             if (i < ranks.Count)
             {
-                ranks[i].name.text = board[i].name;
+                ranks[i].name.text = board[i].name.Contains("#") 
+                    && board[i].name.LastIndexOf("#", StringComparison.InvariantCulture) < board[i].name.Length 
+                        ? board[i].name.Substring(0, board[i].name.LastIndexOf("#", StringComparison.InvariantCulture))
+                        : board[i].name;
                 ranks[i].score.text = board[i].highscore.ToString();
             }
         }

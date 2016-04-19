@@ -213,6 +213,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 424464, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -245,6 +249,78 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[5]
+      value: 
+      objectReference: {fileID: 2800000, guid: 92e143f7bbdeeaa4e80e85ed238a9d2d, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[6]
+      value: 
+      objectReference: {fileID: 2800000, guid: 0430d648228abf44b9ab81914896774f, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[7]
+      value: 
+      objectReference: {fileID: 2800000, guid: 39cf2c20c8a39b94a8c47cfb8ed4a3c5, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[8]
+      value: 
+      objectReference: {fileID: 2800000, guid: a4e3caf4555afd042b53ce4d56135def, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[9]
+      value: 
+      objectReference: {fileID: 2800000, guid: 6b624e869ebd9a64aa6341b3bc1ebaa6, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[10]
+      value: 
+      objectReference: {fileID: 2800000, guid: b3f80168fd8dc1944a9008d92b5d0231, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[11]
+      value: 
+      objectReference: {fileID: 2800000, guid: f435f17810cac0d40948835f713ac502, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[12]
+      value: 
+      objectReference: {fileID: 2800000, guid: 29b36e885c1b328439b2120bb062f5f6, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[13]
+      value: 
+      objectReference: {fileID: 2800000, guid: 7c9c35a99243d14468defabe0b83f068, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[14]
+      value: 
+      objectReference: {fileID: 2800000, guid: 418b7faaf52c0eb42bb605ab10fcc904, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[15]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1092ee7b82ad29e4287a5160f5bb2727, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[16]
+      value: 
+      objectReference: {fileID: 2800000, guid: a4ce950f9c03b00478997feffd3619d1, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 4afc8a6dbc26b82478cb3e32a0c75c38, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: ae8caeadb37a9194f99a6493a43b0afa, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[2]
+      value: 
+      objectReference: {fileID: 2800000, guid: 3d6c3e081ff713d49af65f57d0a457f4, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[3]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: validShapes.Array.data[4]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1376f213cead6234db9d078989813b23, type: 3}
+    - target: {fileID: 11487150, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
+      propertyPath: startShape
+      value: 
+      objectReference: {fileID: 2800000, guid: 7485e7b629fbfb745b18af32973b6033, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aebc42678ace50f4ab3acb76a00699ec, type: 2}
   m_IsPrefabParent: 0
@@ -440,7 +516,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 424800, guid: 5f9d9ac0c12c6904da523e86b8009f40, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -26.36
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 424800, guid: 5f9d9ac0c12c6904da523e86b8009f40, type: 2}
       propertyPath: m_LocalRotation.x
@@ -464,7 +540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 2009398, guid: 5f9d9ac0c12c6904da523e86b8009f40, type: 2}
       propertyPath: field of view
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f9d9ac0c12c6904da523e86b8009f40, type: 2}

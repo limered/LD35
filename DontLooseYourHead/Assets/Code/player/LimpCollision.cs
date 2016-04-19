@@ -21,7 +21,7 @@ public class LimpCollision : BaseCollider
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag != "Wall") return;
-        if (transform.parent.name == destroyedPlayer.name) return;
+        if (gameObject.transform.parent == null || gameObject.transform.parent.tag == "Finish") return;
 
         if (isLast || isMiddle)
         {

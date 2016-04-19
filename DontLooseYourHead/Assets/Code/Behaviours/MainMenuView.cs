@@ -13,7 +13,7 @@ public class MainMenuView : MonoBehaviour
     void Start()
     {
         leaderboard = IoC.Resolve<Leaderboard>();
-        name.gameObject.SetActive(false);
+        name.gameObject.SetActive(true);
     }
 
     void Update()

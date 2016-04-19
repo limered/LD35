@@ -20,6 +20,8 @@ public class DestroyComponent : BaseCollider
 
     private void OnCollisionEnter(Collision col)
     {
+        if (gameObject.transform.parent == null || gameObject.transform.parent.tag == "Finish") return;
+
         if (col.gameObject.tag == "Wall" && col.gameObject.tag != "Blood")
         {
             

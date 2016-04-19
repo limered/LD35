@@ -15,6 +15,7 @@ public class BodyCollision : BaseCollider {
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag != "Wall") return;
+        if (gameObject.transform.parent == null || gameObject.transform.parent.tag == "Finish") return;
 
         RemoveAllHandles();
         var children = GetComponentsInChildren<Transform>();
